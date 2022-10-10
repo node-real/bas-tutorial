@@ -1,6 +1,6 @@
 # bas tutorial
 
-you fill the info in the code.
+you need to fill the parameters in the code.
 
 ```shell
 # first make a proposal use validator owner
