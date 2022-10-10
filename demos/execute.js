@@ -49,7 +49,7 @@ async function main() {
   const transferCalldata = await runtimeUpgradeContract.interface.encodeFunctionData(upgradeSelector, newAddress);
   console.log('transferCalldata: ', transferCalldata);
 
-  const proposalID = ""; // todo: fill proposal id from proposall step.
+  const proposalID = ""; // todo: fill proposal id from proposal step.
   
   const timer = ms => new Promise( res => setTimeout(res, ms));
   let state;

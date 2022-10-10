@@ -1,5 +1,3 @@
-const { times } = require("ramda");
-
 require("@nomiclabs/hardhat-ethers");
 
 async function vote(privateKey, proposalID) {
@@ -61,7 +59,7 @@ async function main() {
   const privateKeys = [
     // todo: fill the privateKeys. **NOTE** this is demo, NEVER do this in production.
   ];
-  const proposalID = ""; // todo: fill proposal id from proposall step.
+  const proposalID = ""; // todo: fill proposal id from proposal step.
   for (const privateKey of privateKeys) {
     console.log("vote: ", privateKey)
     await vote(privateKey, proposalID)
