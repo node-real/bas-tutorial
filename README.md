@@ -4,6 +4,9 @@ a demo how to change free gas address admin.
 you need to fill the parameters in the code.
 
 ```shell
+# install packages
+npm install
+
 # first make a proposal use validator owner
 npx hardhat run demos/proposal.js
 
