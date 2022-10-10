@@ -1,0 +1,24 @@
+{
+  "name": "bas-tutorial",
+  "version": "1.0.0",
+  "description": "bas tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-real/bas-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/node-real/bas-tutorial/issues"
+  },
+  "homepage": "https://github.com/node-real/bas-tutorial#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "hardhat": "^2.11.2"
+  }
+}
