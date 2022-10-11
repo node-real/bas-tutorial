@@ -1,3 +1,5 @@
+const { ethers } = require("ethers");
+
 const stakingAddress = "0x0000000000000000000000000000000000001000";
 const slashingIndicatorAddress = "0x0000000000000000000000000000000000001001";
 const systemRewardAddress = "0x0000000000000000000000000000000000001002";

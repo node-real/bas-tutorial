@@ -1,9 +1,10 @@
-require("@nomiclabs/hardhat-ethers");
+const { ethers } = require("ethers");
 
 const contract = require("./constract.js")
 const utils = require("./utils.js")
 
-async function vote(proposalID) {
+async function vote(proposalId) {
+  console.log("vote: " + proposalId)
 
   const signer = utils.getSigner()
   const goveranceContract = contract.goveranceContract.connect(signer)
@@ -17,21 +18,11 @@ async function vote(proposalID) {
 //     Expired,            // 6
 //     Executed            // 7
 //   }
-  console.log("proposal state: " + await goveranceContract.state(proposalID));
-  let tx = await goveranceContract.castVote(proposalID, 1);
+  console.log("proposal state: " + await goveranceContract.state(proposalId));
+  let tx = await goveranceContract.castVote(proposalId, 1);
   await tx.wait(1);
 }
 
-async function main() {
-
-  const proposalID = ""; // todo: fill proposal id from proposal step.
-  await vote(privateKey, proposalID)
+module.exports = {
+  vote: vote
 }
-
-
-main()
-  .then(() => process.exit(0))
-  .catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
