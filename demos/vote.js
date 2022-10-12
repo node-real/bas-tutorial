@@ -19,7 +19,9 @@ async function vote(proposalId) {
 //     Executed            // 7
 //   }
   console.log("proposal state: " + await goveranceContract.state(proposalId));
+  console.log("before vote")
   let tx = await goveranceContract.castVote(proposalId, 1);
+  console.log("after vote:", tx.hash)
   await tx.wait(1);
 }
 

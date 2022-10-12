@@ -14,9 +14,11 @@ async function execute(description, address, value, data) {
     timer(10000000).then(_ => console.log("sleep"));
   } while (state != 4);
 
+  console.log("before exeucte")
   const executeTx = await goveranceContract.execute([address], [value], [data], utils.keccak256(utils.toUtf8Bytes(description)), {
     gasLimit: 3000000,
   });
+  console.log("after exeucte:", executeTx)
   const executeReceipt = await executeTx.wait(1);
   console.log('executeReciept: ', executeReceipt);
   const proposalId = executeReceipt.events[0].args.proposalId;
